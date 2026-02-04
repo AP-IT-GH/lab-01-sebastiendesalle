@@ -109,7 +109,8 @@ public class FindPathAStar : MonoBehaviour
         {
 
             done = true;
-
+            Debug.Log("Goal Found!");
+            // ShowPath(thisNode);
             return;
         }
 

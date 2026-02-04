@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MapLocation       
+public class MapLocation
 {
     public int x;
     public int z;
@@ -52,17 +52,17 @@ public class Maze : MonoBehaviour
     void Start()
     {
         InitialiseMap();
-        Generate(); // in comment is a maze without a wall
+        // Generate(); // in comment is a maze without a wall
         DrawMap();
     }
 
     void InitialiseMap()
     {
-        map = new byte[width,depth];
+        map = new byte[width, depth];
         for (int z = 0; z < depth; z++)
             for (int x = 0; x < width; x++)
             {
-                    map[x, z] = 0;     //1 = wall  0 = corridor
+                map[x, z] = 0;     //1 = wall  0 = corridor
             }
     }
 
@@ -71,9 +71,9 @@ public class Maze : MonoBehaviour
         for (int z = 0; z < depth; z++)
             for (int x = 0; x < width; x++)
             {
-              // if(Random.Range(0,100) < 50)
-              if(z == 3 && x >2 && x < 8)
-                 map[x, z] = 1;     //1 = wall  0 = corridor
+                // if(Random.Range(0,100) < 50)
+                if (z == 3 && x > 2 && x < 8)
+                    map[x, z] = 1;     //1 = wall  0 = corridor
             }
     }
 
@@ -116,6 +116,6 @@ public class Maze : MonoBehaviour
 
     public int CountAllNeighbours(int x, int z)
     {
-        return CountSquareNeighbours(x,z) + CountDiagonalNeighbours(x,z);
+        return CountSquareNeighbours(x, z) + CountDiagonalNeighbours(x, z);
     }
 }
