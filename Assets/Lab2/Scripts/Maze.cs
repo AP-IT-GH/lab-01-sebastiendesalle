@@ -52,7 +52,7 @@ public class Maze : MonoBehaviour
     void Start()
     {
         InitialiseMap();
-        // Generate(); // in comment is a maze without a wall
+        Generate(); // in comment is a maze without a wall
         DrawMap();
     }
 
@@ -71,8 +71,7 @@ public class Maze : MonoBehaviour
         for (int z = 0; z < depth; z++)
             for (int x = 0; x < width; x++)
             {
-                // if(Random.Range(0,100) < 50)
-                if (z == 3 && x > 2 && x < 8)
+                if (Random.Range(0, 100) < 50)
                     map[x, z] = 1;     //1 = wall  0 = corridor
             }
     }
