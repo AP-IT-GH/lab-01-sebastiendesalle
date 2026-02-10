@@ -141,7 +141,7 @@ public class FindPathAStar : MonoBehaviour
         closed.Add(pm);
 
         open.RemoveAt(0);
-        //pm.marker.GetComponent<Renderer>().material = closedMaterial;
+        pm.marker.GetComponent<Renderer>().material = closedMaterial;
 
         lastPos = pm;
     }
