@@ -32,7 +32,7 @@ public class FollowNodes : MonoBehaviour
             currentWaypointIndex++;
             if (currentWaypointIndex >= waypoints.Length)
             {
-                currentWaypointIndex = 0;
+                currentWaypointIndex = waypoints.Length - 1;
             }
             return;
         }
@@ -54,5 +54,9 @@ public class FollowNodes : MonoBehaviour
         }
 
         transform.Translate(Vector3.forward * stepDistance);
+    }
+    public void ResetToFirstWaypoint()
+    {
+        currentWaypointIndex = 0;
     }
 }
